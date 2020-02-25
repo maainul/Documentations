@@ -2,7 +2,7 @@
 
 ## 1. Compiler Design
 
-## Compiler Phases
+## 1.Compiler Phases
 ```
 The compilation process contains the sequence of various phases. 
 Each phase takes source program in one representation and produces output in another representation. 
@@ -127,3 +127,4 @@ int max(int i);
 Answer:  Total number of tokens 7:     
 int, max, ( ,int, i, ), ;
 ```
+## 2.Syntax Analysis
