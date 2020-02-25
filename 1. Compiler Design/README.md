@@ -11,7 +11,7 @@ It converts the High level input program into a sequence of Tokens.
 Lexical Analysis can be implemented with the Deterministic finite Automata.
 The output is a sequence of tokens that is sent to the parser for syntax analysis
 ```
-
+![lexical](https://user-images.githubusercontent.com/37740006/75213367-136f1c00-57b4-11ea-9381-ed68b1d109ff.png)
 ## What is a token?
 ```
 A lexical token is a sequence of characters that can be treated as a unit in the grammar of the programming languages.
@@ -47,7 +47,7 @@ eg- “float”, “abs_zero_Kelvin”, “=”, “-”, “273”, “;” .
 2. Remove white space characters.
 3. Remove comments.
 4. It also provides help in generating error message by providing row number and column number.
-
+![lexical2](https://user-images.githubusercontent.com/37740006/75213494-7a8cd080-57b4-11ea-9e55-461cb4236f21.png)
 ```
 The lexical analyzer identifies the error with the help of automation machine and the grammar of  
 the given language on which it is based like C , C++ and gives row number and column number of the error.
@@ -82,6 +82,8 @@ You can observe that we have omitted comments.
 ```
 
 ### As another example, consider below printf statement.
+![lexical3](https://user-images.githubusercontent.com/37740006/75213470-6c3eb480-57b4-11ea-8453-5d6d58485869.png)
+
 ```
 token
 There are 5 valid token in this printf statement.
@@ -109,7 +111,7 @@ int max(int i);
 	1. Lexical analyzer first read int and finds it to be valid and accepts as token
 	2. max is read by it and found to be valid function name after reading (
 	3. int  is also a token , then again i as another token and finally ;
-	
+
 ```
 Answer:  Total number of tokens 7:     
 int, max, ( ,int, i, ), ;
