@@ -14,7 +14,8 @@ The output is a sequence of tokens that is sent to the parser for syntax analysi
 ![lexical](https://user-images.githubusercontent.com/37740006/75213367-136f1c00-57b4-11ea-9381-ed68b1d109ff.png)
 ## What is a token?
 ```
-A lexical token is a sequence of characters that can be treated as a unit in the grammar of the programming languages.
+A lexical token is a sequence of characters 
+that can be treated as a unit in the grammar of the programming languages.
 ```
 
 
