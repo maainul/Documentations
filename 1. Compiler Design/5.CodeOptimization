@@ -1,0 +1,96 @@
+# Code Optimization in Compiler Design
+The code optimization in the synthesis phase is a program transformation technique, which tries to improve the intermediate code by making it consume fewer resources (i.e. CPU, Memory) so that faster-running machine code will result. Compiler optimizing process should meet the following objectives :
+
+The optimization must be correct, it must not, in any way, change the meaning of the program.
+Optimization should increase the speed and performance of the program.
+The compilation time must be kept reasonable.
+The optimization process should not delay the overall compiling process.
+When to Optimize?
+Optimization of the code is often performed at the end of the development stage since it reduces readability and adds code that is used to increase the performance.
+
+Types of Code Optimization –The optimization process can be broadly classified into two types :
+
+
+
+Machine Independent Optimization – This code optimization phase attempts to improve the intermediate code to get a better target code as the output. The part of the intermediate code which is transformed here does not involve any CPU registers or absolute memory locations.
+Machine Dependent Optimization – Machine-dependent optimization is done after the target code has been generated and when the code is transformed according to the target machine architecture. It involves CPU registers and may have absolute memory references rather than relative references. Machine-dependent optimizers put efforts to take maximum advantage of the memory hierarchy.
+Code Optimization is done in the following different ways :
+
+Compile Time Evaluation :
+filter_none
+brightness_4
+(i)  A = 2*(22.0/7.0)*r  
+     Perform 2*(22.0/7.0)*r at compile time. 
+(ii)  x = 12.4 
+      y = x/2.3  
+      Evaluate x/2.3 as 12.4/2.3 at compile time. 
+Variable Propagation :
+filter_none
+brightness_4
+//Before Optimization  
+c = a * b                                                
+x = a                                                   
+till                                                            
+d = x * b + 4  
+ 
+ 
+//After Optimization  
+c = a * b   
+x = a 
+till 
+d = a * b + 4 
+Hence, after variable propagation, a*b and x*b will be identified as common sub-expression.
+
+Dead code elimination : Variable propagation often leads to making assignment statement into dead code
+filter_none
+brightness_4
+c = a * b                                                 
+x = a                                                 
+till                                                           
+d = a * b + 4    
+ 
+//After elimination : 
+c = a * b 
+till 
+d = a * b + 4 
+Code Motion :
+• Reduce the evaluation frequency of expression.
+• Bring loop invariant statements out of the loop.
+filter_none
+brightness_4
+a = 200; 
+ while(a>0) 
+ { 
+     b = x + y; 
+     if (a % b == 0} 
+     printf(“%d”, a); 
+   } 
+ 
+ 
+//This code can be further optimized as 
+a = 200; 
+b = x + y; 
+while(a>0) 
+ { 
+     if (a % b == 0} 
+     printf(“%d”, a); 
+   } 
+Induction Variable and Strength Reduction :
+• An induction variable is used in loop for the following kind of assignment i = i + constant.
+• Strength reduction means replacing the high strength operator by the low strength.
+filter_none
+brightness_4
+i = 1;                                                                       
+while (i<10)                                                           
+{                                                                              
+    y = i * 4;  
+} 
+  
+  
+//After Reduction 
+i = 1 
+t = 4 
+{  
+   while( t<40)  
+   y = t;  
+   t = t + 4; 

@@ -15,4 +15,4 @@ There are the various phases of compiler:
 2. [Syntax Analyzer](https://github.com/maainul/Documentations/blob/master/1.%20Compiler%20Design/2.SyntaxAnalysis.md)</br>
 3. [Sementic Analyzer](https://github.com/maainul/Documentations/blob/master/1.%20Compiler%20Design/3.SemanticAnalysis.md)</br>
 4. [Intermediate Code Generation](https://github.com/maainul/Documentations/blob/master/1.%20Compiler%20Design/4.IntermediateCodeGenerator.md)</br>
-5. [Code Optimization]()</br>
+5. [Code Optimization](https://github.com/maainul/Documentations/blob/master/1.%20Compiler%20Design/4.CodeOptimization.md)</br>
